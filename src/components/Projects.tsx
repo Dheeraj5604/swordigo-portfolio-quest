@@ -46,12 +46,6 @@ const Projects = () => {
     },
   ];
 
-  const iconMap = {
-    Brain,
-    TrendingUp,
-    Users,
-  };
-
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
@@ -73,7 +67,7 @@ const Projects = () => {
           {/* Projects Grid */}
           <div className="space-y-8">
             {quests.map((quest, index) => {
-              const Icon = iconMap[quest.icon.name as keyof typeof iconMap];
+              const Icon = quest.icon;
               return (
                 <Card
                   key={index}
